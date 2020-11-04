@@ -47,10 +47,10 @@ func home(w http.ResponseWriter, r *http.Request) {
 	coupon := r.PostFormValue("coupon")
 	valid := coupons.Check(coupon)
 
-	microsservice4 := makeHTTPCall("http://localhost:9093");
+	microservice4 := makeHTTPCall("http://localhost:9093");
 
-	if microsservice4.Status != "OK" {
-		log.Fatal("Error request microsservice4")
+	if microservice4.Status != "OK" {
+		log.Fatal("Error request microservice4")
 	} 
 
 	result := Result{Status: valid}
