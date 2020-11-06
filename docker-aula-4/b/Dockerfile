@@ -1,8 +1,8 @@
 FROM golang:1.15
-WORKDIR /go/src/fullcycle
+WORKDIR /go/src/b
 COPY . .
-RUN GOOS=linux go build
+RUN GOOS=linux go build b.go
 
 EXPOSE 9091
 
-ENTRYPOINT ["bash", "fullcycle"]
+ENTRYPOINT ["./b"]

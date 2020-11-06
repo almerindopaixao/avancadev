@@ -2,11 +2,12 @@ package main
 
 import (
 	"encoding/json"
-	"github.com/joho/godotenv"
-	"github.com/wesleywillians/go-rabbitmq/queue"
 	"html/template"
 	"log"
 	"net/http"
+
+	"github.com/joho/godotenv"
+	"github.com/wesleywillians/go-rabbitmq/queue"
 )
 
 type Order struct {
