@@ -51,4 +51,4 @@ server.listen(port, host, () => {
 
 ---
 
-Desenvolvido durante o avancadev :wave:
+<p align="center">Desenvolvido durante o avancadev :wave:</p>
