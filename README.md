@@ -121,15 +121,29 @@ services:
     image: almerindo/microservico-avancadev-a:latest
     ports:
       - 9090:9090
+    environment:
+      RABBITMQ_DEFAULT_HOST: rabbit
+    depends_on:
+      - rabbit
+    links: [rabbit]
   
   microsservice-b:
-      image: almerindo/microservico-avancadev-b:latest
+    image: almerindo/microservico-avancadev-b:latest
+    restart: always
+    environment:
+      RABBITMQ_DEFAULT_HOST: rabbit
+    depends_on:
+      - rabbit
+    links: [rabbit]
+
   
   microsservice-c:
       image: almerindo/microservico-avancadev-c:latest
       ports:
         - 9092:9092
-  
+      depends_on:
+        - microsservice-b
+      links: [microsservice-b]
 ```
 
 ---
