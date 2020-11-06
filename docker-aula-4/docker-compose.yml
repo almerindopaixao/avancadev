@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+
+  rabbit:
+    image: "rabbitmq:3-management"
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+  
+  microsservice-a:
+    image: almerindopaixa/microsservico-avancadev-a:latest
+    ports:
+      - 9090:9090
+  
+  microsservice-b:
+      image: almerindopaixa/microsservico-avancadev-b:latest
+      ports:
+        - 9091:9091
+  
+  microsservice-c:
+      image: almerindopaixa/microsservico-avancadev-c:latest
+      ports:
+        - 9091:9091
+    
