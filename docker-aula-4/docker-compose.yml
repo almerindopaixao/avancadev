@@ -14,17 +14,17 @@ services:
       - "5672:5672"
   
   microsservice-a:
-    image: almerindopaixa/microsservico-avancadev-a:latest
+    image: almerindo/microservico-avancadev-a:latest
     ports:
       - 9090:9090
   
   microsservice-b:
-      image: almerindopaixa/microsservico-avancadev-b:latest
+      image: almerindo/microservico-avancadev-b:latest
       ports:
         - 9091:9091
   
   microsservice-c:
-      image: almerindopaixa/microsservico-avancadev-c:latest
+      image: almerindo/microservico-avancadev-c:latest
       ports:
-        - 9091:9091
-    
+        - 9092:9092
+  
