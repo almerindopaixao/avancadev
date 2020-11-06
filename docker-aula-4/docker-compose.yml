@@ -20,11 +20,10 @@ services:
   
   microsservice-b:
       image: almerindo/microservico-avancadev-b:latest
-      ports:
-        - 9091:9091
   
   microsservice-c:
       image: almerindo/microservico-avancadev-c:latest
       ports:
         - 9092:9092
+  
   

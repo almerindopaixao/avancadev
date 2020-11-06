@@ -3,6 +3,4 @@ WORKDIR /go/src/b
 COPY . .
 RUN GOOS=linux go build b.go
 
-EXPOSE 9091
-
 ENTRYPOINT ["./b"]
