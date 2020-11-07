@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservicob
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: microservicob
+  template:
+    metadata:
+      labels:
+        app: microservicob
+    spec:
+      containers:
+        - name: microservicob
+          image: almerindo/microservico-avancadev-b:tagname
+          ports:
+            - containerPort: 9091

@@ -1,0 +1,4 @@
+kind create cluster --name=avancadev
+kubectl get nodes
+kubectl get pods
+kubectl get services
